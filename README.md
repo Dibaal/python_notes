@@ -1,6 +1,6 @@
 # python_notes
 
-# Variable Analogy
+`` Variable Analogy``
 
 An analogy for variables in Python could be a box in a storage room.
 
