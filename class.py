@@ -1,3 +1,9 @@
+# OOP is a programming paradigm based on the concept of "objects", which can contain data
+# and code to manipulate that data.
+
+#CLASS: Is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.
+
+
 # #OOP: Object Oriented Programming
 
 # #CONCEPTS OF OOP
@@ -198,11 +204,11 @@
 # a = [x for x in range(6)]
 # print(a)
 
-persons = {
-     "name": "John",
-     "age": 30,
-     "city": "New York"
- }
+# persons = {
+#      "name": "John",
+#      "age": 30,
+#      "city": "New York"
+#  }
 
 # print(person["city"]) 
 
