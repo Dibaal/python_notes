@@ -1,7 +1,31 @@
 # OOP is a programming paradigm based on the concept of "objects", which can contain data
-# and code to manipulate that data.
+# and code to manipulate that data.ie the objects contain the data and the code to manipulate the data.
 
-#CLASS: Is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.
+#CLASS: Is a blueprint for creating objects. It defines a set of attributes and methods that the created objects will have.ie in the class we define the methods and the attributes that the object will have.
+
+class Car: #This line defines a new class named Car. Car here is the blueprint for creating Car objects. 
+    def __init__(self, make, model, year): # Constructor method/initializer. It's a special method that gets called when a new instance of the class is created. Self parameter refers to the instance of the class being created.
+        self.make = make #Assigns the value of the make parameter to the instance variable self.make
+        self.model = model #Assigns the value of the model parameter to the instance variable self.model
+        self.year = year #Assigns the value of the year parameter to the instance variable self.year
+
+    def display_info(self): # Is a method(function) defined inside the class Car.Is intended to operate on instances of the class car(in this case) because it is created within the class Car block as shown from the indentation
+        print(f"{self.year} {self.make} {self.model}")
+
+
+#Class Keywors: The 'class Car:' Indicates the start of the class definition.
+#Indentation: The __init__ and display_info methods are indented under the Car class, showing they are part of the class.
+#Method is the logic for manipulating data provided by the instance(object)
+#Instance(object):An individual object created from a class, containing its own data (attributes)
+#To call a method for reusability within the code, you create an instance of the class and then call the method on the instance.
+
+# Creating instances of the Car class
+car1 = Car("Toyota", "Corolla", 2020)
+car2 = Car("Honda", "Civic", 2018)
+
+# Calling the display_info method on each instance
+car1.display_info()  # Output: 2020 Toyota Corolla
+car2.display_info()  # Output: 2018 Honda Civic
 
 
 # #OOP: Object Oriented Programming
