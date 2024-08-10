@@ -9,13 +9,13 @@ class Car: #This line defines a new class named Car. Car here is the blueprint f
         self.model = model #Assigns the value of the model parameter to the instance variable self.model
         self.year = year #Assigns the value of the year parameter to the instance variable self.year
 
-    def display_info(self): # Is a method(function) defined inside the class Car.Is intended to operate on instances of the class car(in this case) because it is created within the class Car block as shown from the indentation
+    def display_info(self): # Is a method(function) defined inside the class Car.Is intended to operate on instances of the class car(in this case) because it is created within the class Car block as shown from the indentation.Method is the logic for manipulating data provided by the instance(object). The method is where we set the logic for manipulating the data that comes with the object.
         print(f"{self.year} {self.make} {self.model}")
 
 
 #Class Keywors: The 'class Car:' Indicates the start of the class definition.
 #Indentation: The __init__ and display_info methods are indented under the Car class, showing they are part of the class.
-#Method is the logic for manipulating data provided by the instance(object)
+#Method is the logic for manipulating data provided by the instance(object), this logic is stated in the method.
 #Instance(object):An individual object created from a class, containing its own data (attributes)
 #To call a method for reusability within the code, you create an instance of the class and then call the method on the instance.
 
@@ -26,6 +26,45 @@ car2 = Car("Honda", "Civic", 2018)
 # Calling the display_info method on each instance
 car1.display_info()  # Output: 2020 Toyota Corolla
 car2.display_info()  # Output: 2018 Honda Civic
+
+#FOUR PILLARS OF OOP
+
+# 1. ENCAPSULATION: Is the bundling of data and methods that operate on that data within one unit e.g a class. It restricts direct access to some of the object's components.
+#Private attributes: In python, private attributes are indicated by prefixing the attribute name with double underscores(__).
+#Private attributes restrict direct access to these attributes from outside the class
+#Benefits of Enpcapsulation: Data Hiding, Controlled Access, Modularity. 
+#Example of encapsulation is as below
+
+class Person: #Defines a new class named person
+    def __init__(self, name, age): #This is the constructor method that initializes new instance of the person class. Takes name and age as the parameters.
+        self.__name = name  # Assigns the name parameter to a Private attribute __name. The double underscore (__) prefix makes the attribute private.
+        self.__age = age    # Private attribute
+
+    def get_name(self):#This method returns the value of the private attibute __name
+        return self.__name 
+
+    def get_age(self): # Returns the value of the private attribute __age
+        return self.__age
+
+person = Person("Alice", 30)
+print(person.get_name())  # Output: Alice. Accessed the private attributes via Getter methods as shown here,
+
+#2. INHERITANCE: Is a way to form new classes using classes that have already been defined. It helps to reuse the code. See example below:
+
+class Animal: #Defines a base class named Animal
+    def __init__(self, name): # The constructor method of the animal class. It initializes the name attribute
+        self.name = name #Assigns the name parameter to the instance attribute name
+
+    def speak(self):#Method named speak, defined in the Animal class.
+        pass
+
+class Dog(Animal): #Defines a derived class named Dog that inherits from the Animal class. This means Dg will inherit all attributes and methods from Animal.This is the derived class definition.What makes this a derived class from the class Animal? class Dog(Animal): This line indicates that Dog is inherited from Animal. The Animal class is specified in parenthesis. Which means Dog will inherit all attributes and methods from Animal.By inheriting from Animal, the Dog class automatically has access to all the attributes and methods defined in the Animal class, unless they are overriden as below.
+    def speak(self): # This overrides the method above as it provides it's own implementation of the speak method which overrides the speak method in Animal above. 
+        return "Woof!"
+
+dog = Dog("Buddy")
+print(dog.speak())  # Output: Woof!
+# This inheritance relationship allows Dog to reuse and extend the functionality of Animal, making it a derived class.
 
 
 # #OOP: Object Oriented Programming
