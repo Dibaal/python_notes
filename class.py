@@ -66,6 +66,46 @@ dog = Dog("Buddy")
 print(dog.speak())  # Output: Woof!
 # This inheritance relationship allows Dog to reuse and extend the functionality of Animal, making it a derived class.
 
+#POLYMORPHISM: allows methods to do different things based on the object it is acting upon, even though they(methods) share the same name.
+
+class Bird:#Defines a base class named Bird
+    def fly(self):#This is a method within the Bird class. Here we did not use the initializer (__init__), but it is still valid. We mostlu use the initializer when we want to ensure that the object starts with a specific state or when we want to pass parameters to the object upon creation. Here we did not pass any parameters.
+        return "Flying high!"
+
+class Penguin(Bird):#This is a subclass from the Bird class bc (Bird).It is named Penguin, it inherits from the Bird class.
+    def fly(self): #This method is defined within the Penguin class, overriding the fly method of the Bird class.
+        return "I can't fly!"
+
+bird = Bird()
+penguin = Penguin()
+print(bird.fly())    # Output: Flying high!
+print(penguin.fly()) # Output: I can't fly!
+
+#Polymorphism allows objects of different classes to be treated as objects of a common superclass.
+#In this example when calling the fly method on instances of Bird and Penguin, the appropriate method for each class is executed, showcasing polymorphism.
+
+#4. ABSTRACTION: Is the concept of hiding the complex implementation details and showing only the necessary features of the object.
+
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, width, height): # The init method initializes width and height attributes of the Rectangle instance
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+rect = Rectangle(10, 20)
+print(rect.area())  # Output: 200
+
+
+
 
 # #OOP: Object Oriented Programming
 
