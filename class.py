@@ -109,7 +109,7 @@ print(rect.area())  # Output: 200
 
 # #OOP: Object Oriented Programming
 
-# #CONCEPTS OF OOP
+# #4 CONCEPTS OF OOP
 # #CLASS: A blueprint for creating objects. 
 # #OBJECT: A particular instance of a class.
 # #INHERITANCE: MECHANISM WHERE A NEW CLASS CAN INHERIT ATTRIBUTES AND METHODS FROM AN EXISTING CLASS, BASE OR PARENT CLASS.
