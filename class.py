@@ -66,7 +66,7 @@ dog = Dog("Buddy")
 print(dog.speak())  # Output: Woof!
 # This inheritance relationship allows Dog to reuse and extend the functionality of Animal, making it a derived class.
 
-#POLYMORPHISM: allows methods to do different things based on the object it is acting upon, even though they(methods) share the same name.
+#3.POLYMORPHISM: allows methods to do different things based on the object it is acting upon, even though they(methods) share the same name.
 
 class Bird:#Defines a base class named Bird
     def fly(self):#This is a method within the Bird class. Here we did not use the initializer (__init__), but it is still valid. We mostlu use the initializer when we want to ensure that the object starts with a specific state or when we want to pass parameters to the object upon creation. Here we did not pass any parameters.
