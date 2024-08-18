@@ -1,0 +1,17 @@
+We create modules and inport them to several projects through the use of packages
+What is a Module? It is a python file with functions, classes and other components
+Why use modules? It gives us the opportunity to be able to break down our code into reusable structures and also hels make things more readable as well
+HOW TO CREATE A MODULE?
+To create a module all we need to do is
+ (1) create a file helpers.py and then add the appropriate code
+ IMPORTING MODULE
+When it comes to use a modeule, then we need to import it;
+
+3 WAYS OF IMPORTING MODULES
+ (1) #import module as namespace, (note helpers.py is the name of the module)
+ import helpers #This pulls in all the code in the module to a namespace called helpers
+ helpers.display('Not a Warning') #Anytime we need to use a function in the namespace(helpers) we type the namespace(which is helpers in this case).the name of the function we want.
+
+ (2)# import all into current namespace. Here we do not want to be typing helpers each time we want to access the display function, so we import everything into the namespace and it will now be globally available.
+ from helpers import *
+ display('Not a Warning')
